@@ -18,6 +18,7 @@ const inventory = [
   { id: 8, name: "sourdough", price: 5.5, category: "grains", quantity: 81 },
 ];
 
+console.table(inventory);
 // === Complete the functions below! ===
 
 /**
@@ -25,7 +26,9 @@ const inventory = [
  * @param {Item[]} items - array of items
  */
 function logNames(items) {
-  // TODO: use `forEach`
+  items.forEach((element) => {
+    console.log(element.name);
+  });
 }
 
 /**
@@ -34,6 +37,11 @@ function logNames(items) {
  */
 function getUppercaseNames(items) {
   // TODO: use `map`
+  function getUppercaseNames(items) {
+    // TODO: use `map`
+    const upperCase = items.map((element) => element.name.toUpperCase());
+    return upperCase;
+  }
 }
 
 /**
@@ -43,6 +51,9 @@ function getUppercaseNames(items) {
  */
 function getItemById(items, id) {
   // TODO: use `find`
+  const itemById = items.find((element) => element.id === id);
+  const item = itemById.name;
+  return item;
 }
 
 /**
