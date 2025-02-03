@@ -35,13 +35,11 @@ function logNames(items) {
  * @param {Item[]} items - array of items
  * @returns {string[]} an array of item names in all uppercase
  */
+
 function getUppercaseNames(items) {
   // TODO: use `map`
-  function getUppercaseNames(items) {
-    // TODO: use `map`
-    const upperCase = items.map((element) => element.name.toUpperCase());
-    return upperCase;
-  }
+  const upperCase = items.map((element) => element.name.toUpperCase());
+  return upperCase;
 }
 
 /**
@@ -63,6 +61,12 @@ function getItemById(items, id) {
  */
 function getItemPriceByName(items, name) {
   // TODO: use a loop!
+  for (const element of items) {
+    if (element.name === name) {
+      price = element.price;
+    }
+  }
+  return price;
 }
 
 /**
