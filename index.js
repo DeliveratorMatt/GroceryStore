@@ -99,6 +99,8 @@ function countItems(items) {
  */
 function getTotalPrice(items) {
   // TODO: use `reduce`
+  const total = items.reduce((total, element) => total + element.price, 0);
+  return total;
 }
 
 // === READ BUT DO NOT CHANGE THE CODE BELOW ===
