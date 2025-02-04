@@ -76,6 +76,11 @@ function getItemPriceByName(items, name) {
  */
 function getItemsByCategory(items, category) {
   // TODO: use `filter`
+  const elementsInCat = items.filter(
+    (element) => element.category === category
+  );
+  const itemsInCat = elementsInCat.map((element) => element.name);
+  return itemsInCat;
 }
 
 /**
@@ -84,6 +89,8 @@ function getItemsByCategory(items, category) {
  */
 function countItems(items) {
   // TODO: use `reduce`
+  const total = items.reduce((total, element) => total + element.quantity, 0);
+  return total;
 }
 
 /**
